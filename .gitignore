@@ -42,10 +42,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# generated agent instruction files
-CLAUDE.md
-AGENTS.md
-.claude/
-
 # transient screenshot output
 docs/screenshots/*.tmp
