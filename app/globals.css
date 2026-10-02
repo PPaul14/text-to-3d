@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/*
+ * Text-to-3D Studio is a dark-only app: the viewer is tuned against a near
+ * black background, so there is no light theme to switch to.
+ */
+:root {
+  --background: #020617; /* slate-950 */
+  --foreground: #f1f5f9; /* slate-100 */
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+/* The canvas handles its own gestures; stop the page from panning with them. */
+canvas {
+  touch-action: none;
+  display: block;
+}
+
+::selection {
+  background: #0369a1;
+  color: #f8fafc;
+}
+
+/* Keep the thin dark scrollbar consistent with the rest of the chrome. */
+* {
+  scrollbar-color: #334155 transparent;
+  scrollbar-width: thin;
+}
