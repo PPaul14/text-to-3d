@@ -2,7 +2,7 @@
 
 Turn a text prompt into an interactive, downloadable 3D model — powered by the Shap-E text-to-3D model running on Hugging Face Spaces.
 
-**Live demo:** `<LIVE_URL>`
+**Live demo:** `https://text-to-3d-rho.vercel.app`
 
 ---
 
@@ -252,7 +252,7 @@ Notes:
 
 ## Limitations
 
-- **Model quality.** Shap-E is a 2023 model. Results are blobby and low-resolution, with vertex colours rather than textures. It handles simple, chunky objects well and struggles with fine detail, thin structures and text.
+- **Model quality.** Shap-E is a 2023 model. Results are coarse and low-resolution, with vertex colours rather than textures. It handles simple, chunky objects well and struggles with fine detail, thin structures and text.
 - **GPU quota.** Without `HF_TOKEN`, only a handful of generations are available per IP address.
 - **Single free provider.** No second free text-to-3D Space is currently reachable, so if Shap-E is unavailable the app needs `MESHY_API_KEY` to produce anything.
 - **History is in-memory.** The last five generations live in React state and are lost on refresh. The Space also deletes its temporary files after a while, so an older history entry can fail to reload.
